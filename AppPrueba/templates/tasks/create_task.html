@@ -1,0 +1,15 @@
+{% extends 'layouts/layout.html' %}  {#Hereda de layout.html#}
+
+{% block body %}
+
+<h1>Crear Tarea</h1>
+
+ <form method="post"> {#Si no coloco nada en action lo enviara a create_task del controlador#}
+    {% csrf_token %} {#Token de seguridad#}
+    {{form.as_p}} {#Muestra el formulario en etiquetas p#}
+    <button>
+        Save
+    </button>
+ </form>
+
+{% endblock %}  

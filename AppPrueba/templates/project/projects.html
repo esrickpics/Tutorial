@@ -1,0 +1,12 @@
+{% extends 'layouts/layout.html' %}  {#Hereda de layout.html#}
+
+{% block body %}
+<h1>Proyectos</h1>
+
+{% for projec in projects %} <!--projects es una variable que se pasa desde el controlador -->
+<div class="">
+    <p>{{ projec.name }}</p> 
+    <p>{{ projec.description }}</p>
+</div>
+{% endfor %}
+{% endblock %}

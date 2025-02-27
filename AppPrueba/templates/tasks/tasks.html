@@ -1,0 +1,26 @@
+{% extends 'layouts/layout.html' %} <!--Hereda de layout.html -->
+{% block body %}
+
+<h1>Tareas</h1>
+
+{# Notas #}
+{% for task in tasks %} <!--tasks es una variable que se pasa desde el controlador -->
+    <div class="">
+        <h2>{% if task.done == False %}🕑 {% else %} ✔ {% endif %} {{ task.title }}</h2> 
+        {# False y True deben estar en mayusculas para que lo interprete #}
+        {%if task.done == False %}
+        <p> Tarea Pendiente</p> <!-- Condicional-->
+        {%else%}
+        <p> Tarea Realizada  ✔ </p> 
+        {%endif%}
+        <p>Proyecto: {{ task.project.name }}</p> <!-- task.project es una variable que sale gracias al proyect_id-->
+    </div>
+    <button>
+        Eliminar
+    </button>
+    <button>
+        ✔ Done
+    </button>
+{% endfor %}
+{# Formulario para crear una tarea #}
+{% endblock %}
