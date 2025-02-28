@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'AppPrueba'
-]
+] # por cada app se debe agregar aqui el nombre de la app
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
